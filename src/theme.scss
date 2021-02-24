@@ -1,0 +1,279 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "./variables.scss";
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/dropdown";
+@import "./userList.scss";
+
+html {
+  font-size: 16px!important;
+  @media screen and (max-width: 576px) {
+    font-size: 14px!important;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 13px!important;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 12px!important;
+  }
+  @media screen and (max-width: 330px) {
+    font-size: 11px!important;
+  }
+}
+
+body {
+  background-color: $light;
+}
+
+a {
+  color: $primary;
+}
+
+input, .form-control {
+  outline: none!important;
+  color: $black;
+}
+
+input:focus, .form-control:focus {
+  border-color: $primary-50;
+  box-shadow: 0 0 0 0.1rem $primary-50;
+}
+
+.container {
+  @media screen and (max-width: 1200px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.btn, .form-control,
+input, .input-group {
+  border-radius: 2px;
+}
+
+.btn, b {
+  font-weight: 700!important;
+}
+
+.font-weight-black {
+  font-weight: 900!important;
+}
+
+.cursor-pointer, .btn {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-text {
+  cursor: text;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.opacity-disabled {
+  opacity: $btn-disabled-opacity;
+}
+
+.opacity-28 {
+  opacity: 0.28;
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: 1;
+  background-color: $disabled;
+  color: $white;
+  border: $disabled;
+  box-shadow: none;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    &.disabled,
+    &:disabled {
+      color: $disabled !important;
+      border: $btn-border-width $disabled solid !important;
+      background-color: transparent;
+    }
+  }
+}
+
+a, a:hover, .btn-link, .btn-link:hover, .btn-link:not(:disabled):not(.disabled):active,
+.btn-link:not(:disabled):not(.disabled).active, .show > .btn-link.dropdown-toggle,
+.btn-link:not(:disabled):not(.disabled):active:focus, .btn-link:not(:disabled):not(.disabled).active:focus,
+.btn-link.dropdown-toggle:focus, .btn-link:focus {
+  color: $primary;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+a.text-white:hover, a.text-white:focus {
+  color: $white !important;
+}
+
+.btn-link:disabled, .btn-link.disabled {
+  color: $secondary;
+  background-color: transparent;
+  border-color: transparent;
+  pointer-events: none;
+}
+
+body, .btn {
+  font-size: 1rem;
+}
+
+.fs-1, h1 {
+  font-size: 1.5rem!important;
+}
+
+.fs-2, h2 {
+  font-size: 1.4rem!important;
+}
+
+.fs-3, h3 {
+  font-size: 1.2rem!important;
+}
+
+.fs-4, h4 {
+  font-size: 1rem!important;
+}
+
+.fs-5, h5 {
+  font-size: 0.9rem!important;
+}
+
+.fs-6, h6 {
+  font-size: 0.8rem!important;
+}
+
+.fs-7 {
+  font-size: 0.7rem!important;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $secondary;
+  border-radius: 10px;
+}
+
+* {
+  scrollbar-width: none;
+  scroll-behavior: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  border-color: $danger;
+  padding-right: inherit;
+  background: none;
+}
+
+.custom-control-label::before {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: $white;
+  border-color: $primary;
+  background-color: $white;
+}
+
+.custom-control-label::after {
+  top: 0.244rem;
+  left: -1.4756rem;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.sell-on-lovelocal-button {
+  border-radius: 20px;
+}
+
+.firstNameButton {
+  max-width: 150px;
+}
+
+.border-radius-3 {
+  border-radius: 3px;
+}
+
+.spinner {
+  height: 1.2rem !important;
+  width: 1.2rem !important;
+}
+
+.shopLogo {
+  height: 100px!important;
+  width: 100px!important;
+  @media screen and (min-width: 1200px) {
+    height: 100px!important;
+    width: 100px!important;
+  }
+  @media screen and (min-width: 992px) {
+    height: 140px!important;
+    width: 140px!important;
+  }
+  @media screen and (min-width: 768px) {
+    height: 120px!important;
+    width: 120px!important;
+  }
+  @media screen and (min-width: 411px) {
+    height: 100px!important;
+    width: 100px!important;
+  }
+  @media screen and (max-width: 411px) {
+    height: 60px!important;
+    width: 60px!important;
+  }
+}

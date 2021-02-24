@@ -1,0 +1,109 @@
+/*
+  Bootstrap config overrides
+*/
+
+$grid-columns: 24;
+
+// default color override
+$primary:       #b8238e;
+$primary-50:    #b8238e50;
+$primary-dark:  #630048;
+$primary-light: #fff2fb;
+$pink:          #e065be;
+$pink-light:    #fff2fb;
+$pale-pink:     #ffebf9;
+$link:          #b8238e;
+$secondary:     #999999;
+$medium:        #666666;
+$medium-light:  #646466;
+$danger:        #A30000;
+$danger-light:  #f5cece;
+$light:         #F4F4F4;
+$dark:          #333333;
+$white:         #FFFFFF;
+$disabled:      #E0E0E0;
+$black:         #131314;
+$black-72:      #000000B8;
+$brown:         #8a584b;
+$violet:        #2b2ba0;
+$violet-dark:   #161666;
+$yellow:        #f9ed32;
+$yellow-light:  #fffab3;
+$green:         #29cc6a;
+$green-light:   #ebfff3;
+$blue:          #0067d7;
+$blue-light:    #d6eaff;
+$orange:        #d76200;
+$orange-light:  #ffe9d6;
+$gray:          #a4a4a4;
+$grey:          #f5f5f5;
+$grey-light:    #dcdce0;
+
+$theme-colors: (
+  "primary":        $primary,
+  "primary-50":     $primary-50,
+  "primary-dark":   $primary-dark,
+  "primary-light":  $primary-light,
+  "pink":           $pink,
+  "pink-light":     $pink-light,
+  "pale-pink":      $pale-pink,
+  "link":           $link,
+  "secondary":      $secondary,
+  "medium":         $medium,
+  "medium-light":   $medium-light,
+  "info":           $info,
+  "danger":         $danger,
+  "danger-light":   $danger-light,
+  "light":          $light,
+  "dark":           $dark,
+  "white":          $white,
+  "disabled":       $disabled,
+  "black":          $black,
+  "black-72":       $black-72,
+  "brown":          $brown,
+  "violet":         $violet,
+  "yellow":         $yellow,
+  "yellow-light":   $yellow-light,
+  "green":          $green,
+  "green-light":    $green-light,
+  "blue":           $blue,
+  "blue-light":     $blue-light,
+  "orange":         $orange,
+  "orange-light":   $orange-light,
+  "gray":           $gray,
+  "grey":           $grey,
+  "grey-light":     $grey-light,
+);
+
+// spacers override
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: ($spacer * .75),
+  4: $spacer,
+  5: ($spacer * 1.25),
+  6: ($spacer * 1.5),
+  7: ($spacer * 2),
+  8: ($spacer * 2.5),
+  9: ($spacer * 3),
+  10: ($spacer * 4),
+  11: ($spacer * 5),
+  12: ($spacer * 6),
+  13: ($spacer * 6.5),
+);
+
+$sizes: map-merge(
+  (
+    0:    0%,
+    25:   25%,
+    50:   50%,
+    75:   75%,
+    85:   85%,
+    100:  100%,
+    auto: auto
+  ),
+  $sizes
+);
+
+$numbers: 1, 2, 3, 4, 5, 6;
